@@ -16,7 +16,7 @@ const Sidebar = () => {
     ];
 
   return (
-    <div className={`bg-inevitable-blue h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
+    <div className={`shadow-[0px_20px_20px_10px_#00000000] bg-inevitable-blue h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
         <BsArrowLeftShort 
             className = {
             `bg-white text-inevitable-blue text-3xl rounded-full absolute -right-3 top-9 border border-inevitable-blue cursor-pointer ${!open && "rotate-180"}`} 
@@ -42,6 +42,7 @@ const Sidebar = () => {
                   </span>
                   <span className={`text-base font-medium flex-1 ${!open && "hidden"}`}>{menu.title}</span>
                 </li>
+                <div className={`mb-1 text-white text-center uppercase py-2 text-[9px] font-light flex-1 ${open && "hidden"}`}>{menu.title}</div>
               </>
             ))}
         </ul>
